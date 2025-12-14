@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivdrishti Services</title>
+  <meta name="description" content="CCTV installation, maintenance, solar panel installation and solar services in Pune." />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Arial,sans-serif; }
+    body.dark { background:#0e0e0e; color:#eee; }
+
+    header { background:#0e0e0e; color:white; text-align:center; padding:25px; }
+    header img { width:180px; }
+
+    nav { background:#131313; padding:15px; text-align:center; position:sticky; top:0; }
+    nav a { color:#e3c87b; margin:0 15px; text-decoration:none; font-weight:bold; }
+
+    .theme-toggle { position:fixed; top:20px; right:20px; background:#e3c87b; padding:10px; cursor:pointer; border-radius:6px; }
+
+    .hero {
+      height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2.2rem;
+      color:white;
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('CCTV_H.png') center/cover;
+      text-align:center;
+    }
+
+    section { max-width:1100px; margin:auto; padding:50px 20px; }
+    h2 { text-align:center; margin-bottom:30px; }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .card {
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 4px 12px rgba(0,0,0,.15);
+    }
+    body.dark .card { background:#1a1a1a; }
+
+    .card img { width:100%; height:180px; object-fit:cover; }
+    .card-content { padding:20px; }
+
+    form {
+      max-width:600px;
+      margin:auto;
+      background:white;
+      padding:25px;
+      border-radius:10px;
+    }
+    body.dark form { background:#1a1a1a; }
+
+    input, textarea {
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border-radius:6px;
+      border:1px solid #ccc;
+    }
+
+    button {
+      width:100%;
+      padding:14px;
+      background:#e3c87b;
+      border:none;
+      border-radius:6px;
+      font-size:1rem;
+      cursor:pointer;
+    }
+
+    footer { background:#0e0e0e; color:white; text-align:center; padding:25px; }
+
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+      text-decoration:none;
+      font-size:22px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="theme-toggle" onclick="document.body.classList.toggle('dark')">Toggle Theme</div>
+
+<header>
+  <img src="FinalLogo.png" alt="Shivdrishti Services Logo">
+  <h1>Shivdrishti Services</h1>
+  <p>Where Technology Meets Trust</p>
+</header>
+
+<nav>
+  <a href="#services">Services</a>
+  <a href="#quote">Request Quote</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">Advanced CCTV & Solar Solutions</div>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="grid">
+  <div class="card">
+    <img src="CCTV_W.png">
+    <div class="card-content"><h3>CCTV Installation</h3><p>Professional camera installation for homes and offices.</p></div>
+  </div>
+  <div class="card">
+    <img src="Solar_M.png">
+    <div class="card-content"><h3>CCTV Maintenance</h3><p>Complete maintenance & repair services.</p></div>
+  </div>
+  <div class="card">
+    <img src="CCTV_H.png">
+    <div class="card-content"><h3>Solar Installation</h3><p>Rooftop solar solutions.</p></div>
+  </div>
+  <div class="card">
+    <img src="Solar_C.png">
+    <div class="card-content"><h3>Solar Maintenance</h3><p>Cleaning & system optimization.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="quote">
+<h2>Request a Quote</h2>
+<form onsubmit="sendWhatsApp(); return false;">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="text" id="phone" placeholder="Phone Number" required>
+  <input type="email" id="email" placeholder="Email Address">
+  <textarea id="message" rows="5" placeholder="Describe your requirement"></textarea>
+  <button type="submit">Send on WhatsApp</button>
+</form>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p style="text-align:center">
+Phone: +91 9595353496<br>
+Email: shivdrishtiservices@gmail.com<br>
+Location: Tathawade, Pune
+</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919595353496" target="_blank">💬</a>
+
+<footer>© 2025 Shivdrishti Services</footer>
+  <script>
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  var whatsappNumber = "919595353496"; // YOUR NUMBER
+
+  var text =
+    "New Enquiry from Website%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Email: " + email + "%0A%0A" +
+    "Requirement:%0A" + message;
+
+  var url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+  window.open(url, "_blank");
+}
+</script>
+
+
+</body>
+</html>
+
